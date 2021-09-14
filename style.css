@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+* {
+  font-family: "Quicksand", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  display: block;
+  text-decoration: none;
+}
+main {
+  /* justify-content: center;
+  align-items: center;
+  display: flex; */
+  min-height: 100vh;
+  background: rgb(254, 156, 121);
+  background: linear-gradient(
+    165deg,
+    rgba(254, 156, 121, 1) 0%,
+    rgba(155, 62, 205, 1) 80%,
+    rgba(124, 58, 228, 1) 100%
+  );
+}
+.flex {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.bigcontainer {
+  box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px,
+    rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px,
+    rgba(240, 46, 170, 0.05) 25px 25px;
+  display: flex;
+  backdrop-filter: blur(15px);
+  z-index: 9;
+  border-radius: 2rem;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  min-height: 70vh;
+  width: 70%;
+}
+
+.ball1,
+.ball2 {
+  border-radius: 50%;
+  position: absolute;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.8),
+    rgba(219, 103, 210, 0.5)
+  );
+  height: 20rem;
+  width: 20rem;
+}
+.ball1 {
+  box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px,
+    rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px,
+    rgba(240, 46, 170, 0.05) 0px 25px;
+  left: 5%;
+  bottom: 5%;
+}
+.ball2 {
+  box-shadow: rgba(240, 46, 170, 0.4) -5px 5px,
+    rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px,
+    rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+  right: 5%;
+  top: 10%;
+}
+.smallcontainer1 {
+  border-radius: 2rem;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.3)
+  );
+  width: 33%;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+.smallcontainer1 .ava img {
+  animation: xoay 3s linear infinite;
+  border-radius: 50%;
+  width: 8vw;
+  height: 8vw;
+}
+@keyframes xoay {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.smallcontainer1 .ava {
+  font-weight: bolder;
+  color: rgb(187, 42, 122);
+  font-size: 1.5rem;
+  margin: 3rem 0;
+}
+
+.social a {
+  width: fit-content;
+  color: rgb(187, 42, 122);
+  margin: 0rem 2rem;
+  padding: 1rem 5rem;
+  display: flex;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  transition: 0.2s ease-in;
+}
+.social a:hover {
+  color: rgb(123, 87, 255);
+}
+.social a i {
+  width: 24px;
+}
+.social a p {
+  padding: 0 1rem;
+}
+
+.smallcontainer2 {
+  flex: 3;
+  /* background: black; */
+}
+.slogan {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  margin: 2rem 0;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  border-radius: 2rem;
+  color: rgb(255, 255, 255);
+  background: linear-gradient(
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 0.7) 100%
+  );
+  width: 80%;
+  height: 15vh;
+}
+.slogan h3 {
+  font-size: 1.4rem;
+  width: 50%;
+}
+.slogan img {
+  animation: dap 1.5s infinite ease-in-out;
+  border-radius: 0;
+  width: 40%;
+}
+@keyframes dap {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
